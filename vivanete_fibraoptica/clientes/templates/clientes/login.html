@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Fazer Login{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br><br><br><br>
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-6">
+            <div class="card card-signup hs-card-signup">
+                <div class="header header-success text-center">
+                    <h4>Fazer Login</h4>
+                </div>
+                <p class="text-divider">
+                    <img src="{% static 'img/logo VIVANETE telecom.webp' %}" style="height: 60px">
+                </p>
+                <p class="text-divider">Entre com seu usuário e senha para acessar a Central do Assinante</p>
+                <div class="content">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% if form.errors %}
+                            <div class="alert alert-danger">
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                {% endfor %}
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <!-- Campo de Usuário -->
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="material-icons">face</i>
+                            </span>
+                            {{ form.username }}
+                        </div>
+                        <!-- Campo de Senha -->
+                        <div class="input-group mt-3">
+                            <span class="input-group-addon">
+                                <i class="material-icons">lock</i>
+                            </span>
+                            {{ form.password }}
+                        </div>
+                        <!-- Checkbox e Botão -->
+                        <div class="footer text-center">
+                            <div class="checkbox text-center" style="margin-top: 1px">
+                                <label style="color:grey">
+                                    <input id="aceite_termo_uso" type="checkbox" required>
+                                    Concordo com os termos de uso
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-md" id="btnFazerLogin" disabled>
+                                Fazer Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

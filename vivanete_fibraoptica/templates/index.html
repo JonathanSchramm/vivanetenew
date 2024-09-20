@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <!-- Linha de botões -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <!-- Botões no canto esquerdo -->
+        <div>
+            <a href="https://www.facebook.com/Vivanete/" target="_blank" class="btn social-button facebook-btn">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/vivaneteinternet/" target="_blank" class="btn social-button instagram-btn">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=554930602020&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20planos%20" target="_blank" class="btn social-button whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+        <!-- Botão no canto direito -->
+        <div>
+            <a href="https://central.vivainternet.hubsoft.com.br/" target="_blank" class="btn segunda-via-btn">
+                <i class="fas fa-file-invoice"></i> Segunda Via
+            </a>
+        </div>
+    </div>
+    <!-- Restante do conteúdo -->
+    <h1 class="display-4">Bem-vindo à Fibra Óptica</h1>
+    <p class="lead">A melhor internet de fibra óptica para você!</p>
+    <hr class="my-4">
+    <img src="{% static 'img/carousel img4 (1).png' %}" alt="">
+    <p>Conheça nossos planos e serviços.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'lista_planos' %}" role="button">Ver Planos</a>
+    <hr class="my-4">
+    <!-- Seção 'Consulte sua cobertura' -->
+    <div class="plano-disponivel px-4 py-4 mb-4 bg-light border rounded">
+        <h2 class="text-base font-weight-normal">Será que tem algum plano disponível na minha localização?</h2>
+        <div class="pt-3 btn-container">
+            <a href="https://wa.me/554930602020" target="_blank" class="btn btn-primary btn-block" data-ic-item="sec-consultar-disponibilidade">
+                <div class="btn-frame btn-frame-default">
+                    <span>Consulte sua cobertura
+                        <!-- SVG do ícone -->
+                        <svg class="inline-block" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5962 18.2554L12.5 19.2126L11.4038 18.2554C7.48842 14.8366 5.5 11.8112 5.5 9C5.5 5.02141 8.60349 2 12.5 2C16.3965 2 19.5 5.02141 19.5 9C19.5 11.8112 17.5116 14.8366 13.5962 18.2554ZM6.18555 14.8034C6.59614 15.3656 7.05352 15.9373 7.55748 16.519C5.69525 16.9384 4.5 17.5337 4.5 18C4.5 18.807 8.07914 20 12.5 20C16.9209 20 20.5 18.807 20.5 18C20.5 17.5337 19.3047 16.9384 17.4425 16.519C17.9465 15.9373 18.4039 15.3656 18.8144 14.8034C21.0633 15.4858 22.5 16.5804 22.5 18C22.5 20.5068 18.0203 22 12.5 22C6.97973 22 2.5 20.5068 2.5 18C2.5 16.5804 3.93674 15.4858 6.18555 14.8034ZM12.5 4C15.3038 4 17.5 6.13816 17.5 9C17.5 11.047 15.8727 13.5659 12.5 16.556C9.12733 13.5659 7.5 11.047 7.5 9C7.5 6.13816 9.69624 4 12.5 4ZM12.5 6C14.1569 6 15.5 7.34315 15.5 9C15.5 10.6569 14.1569 12 12.5 12C10.8431 12 9.5 10.6569 9.5 9C9.5 7.34315 10.8431 6 12.5 6ZM11.5 9C11.5 8.44772 11.9477 8 12.5 8C13.0523 8 13.5 8.44772 13.5 9C13.5 9.55228 13.0523 10 12.5 10C11.9477 10 11.5 9.55228 11.5 9Z" fill="white"></path>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

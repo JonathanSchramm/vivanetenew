@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Mensagem de Contato - Vivanete Telecom</title>
+    <style>
+        /* Estilos básicos para o email */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #228B22; /* Verde Floresta */
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .content h2 {
+            color: #228B22;
+            border-bottom: 2px solid #228B22;
+            padding-bottom: 5px;
+        }
+        .details {
+            margin: 10px 0;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .footer {
+            text-align: center;
+            color: #777777;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="https://static.wixstatic.com/media/661a42_3e8e6eae26384330b5b71dd6d2f76161~mv2.png/v1/fill/w_463,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20VIVANETE%20telecom%20comprido%20laranja.png" alt="Vivanete Telecom Logo" class="logo" style="max-width: 150px; max-height: 100%;">
+            <h1>Nova Mensagem de Contato</h1>
+        </div>
+        <div class="content">
+            <h2>Detalhes do Contato</h2>
+            <div class="details">
+                <p><strong>Nome:</strong> {{ name }}</p>
+                <p><strong>Email:</strong> {{ email }}</p>
+                <p><strong>Assunto:</strong> {{ subject }}</p>
+                <p><strong>Mensagem:</strong></p>
+                <p>{{ message|linebreaks }}</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Este email foi enviado através do formulário de contato da Vivanete Telecom.</p>
+            <p>Endereço: R. Marcílio Dias, 1868 - Centro, São Miguel do Oeste - SC, 89900-000, Brazil</p>
+            <p>&copy; {{ current_year }} Vivanete Telecom. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

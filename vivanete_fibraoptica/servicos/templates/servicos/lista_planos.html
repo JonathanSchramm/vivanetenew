@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Planos de Internet{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4" style="color: #3d3d3d;">Nossos Planos</h1>
+    <div class="planos-container">
+        {% for plano in planos %}
+        <div class="card-plano{% if plano.destaque %} destaque{% endif %}">
+            {% if plano.destaque %}
+            <div class="selo-destaque">Oferta Imperdível</div>
+            {% endif %}
+            <div class="card-header">
+                <h2>{{ plano.velocidade }}</h2>
+                <p>{{ plano.nome }}</p>
+            </div>
+            <div class="card-body">
+                <p class="preco">
+                    <span>Por apenas</span>
+                    <strong>R$ {{ plano.preco }}<span>/mês</span></strong>
+                </p>
+                <ul class="beneficios">
+                    {% for beneficio in plano.beneficios %}
+                    <li>{{ beneficio }}</li>
+                    {% endfor %}
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=554930602020&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20plano%20de%20{{ plano.velocidade }}%20e%20como%20fazer%20para%20assinar." target="_blank" class="btn-assinar">Assine Já</a>
+            </div>
+            {% if plano.observacao %}
+            <div class="card-footer">
+                <p>{{ plano.observacao|safe }}</p>
+            </div>
+            {% endif %}
+        </div>
+        {% empty %}
+        <p>Nenhum plano disponível no momento.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

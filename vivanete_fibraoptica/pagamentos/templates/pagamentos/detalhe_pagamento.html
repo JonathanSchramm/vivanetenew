@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Detalhe do Pagamento{% endblock %}
+
+{% block content %}
+<h1>Detalhe do Pagamento</h1>
+<p>Status: {{ pagamento.status }}</p>
+<p>Valor: R$ {{ pagamento.valor }}</p>
+<p>Plano: {{ pagamento.plano.nome }}</p>
+
+{% if pagamento.qr_code_imagem %}
+    <p>Escaneie o QR Code abaixo com seu aplicativo bancário para realizar o pagamento:</p>
+    <img src="data:image/png;base64,{{ pagamento.qr_code_imagem }}" alt="QR Code Pix">
+{% else %}
+    <p>Erro ao gerar QR Code.</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+Olá {{ pagamento.cliente.nome }},
+
+Seu pagamento referente ao plano {{ pagamento.plano.nome }} foi confirmado com sucesso!
+
+Detalhes do pagamento:
+- Valor: R$ {{ pagamento.valor }}
+- Data: {{ pagamento.data_pagamento|date:"d/m/Y H:i" }}
+
+Obrigado por escolher nossos serviços.
+
+Atenciosamente,
+Equipe Fibra Óptica

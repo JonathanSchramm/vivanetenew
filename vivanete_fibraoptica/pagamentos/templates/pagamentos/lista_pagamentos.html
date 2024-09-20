@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+<h1>Histórico de Pagamentos</h1>
+<ul>
+    {% for pagamento in pagamentos %}
+    <li>{{ pagamento.cliente.nome }} - {{ pagamento.plano.nome }} - {{ pagamento.status }}</li>
+    {% endfor %}
+</ul>

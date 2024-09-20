@@ -1,0 +1,372 @@
+.nav-link {
+    color: #fff !important;
+    width: 100%;
+}
+.nav-link:hover {
+    background-color: #212529;
+}
+.navbar-brand img {
+    width: 100%;
+    max-height: 100%;
+    max-width: 100px;
+    padding: 10px 10px;
+}
+.jumbotron img {
+    width: 100%;
+    max-height: 100%;
+    padding: 10px 10px;
+}
+.jumbotron {
+    background-color: #fff !important;
+}
+/* Estilos para os botões sociais */
+
+.social-button {
+    color: #fff;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.facebook-btn:hover {
+    background-color: #2d4373;
+    border-color: #2d4373;
+}
+
+.instagram-btn {
+    background-color: #E1306C;
+    border-color: #E1306C;
+}
+
+.instagram-btn:hover {
+    background-color: #C13584;
+    border-color: #C13584;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    border-color: #128C7E;
+}
+
+/* Estilos para o botão 'Segunda Via' */
+
+.segunda-via-btn {
+    background-color: #FFC107;
+    border-color: #FFC107;
+    color: #212529;
+}
+
+.segunda-via-btn:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    color: #212529;
+}
+
+/* Estilos para a seção 'Consulte sua cobertura' */
+.plano-disponivel {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff !important;
+    border: none !important;
+}
+
+.plano-disponivel h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.btn-frame {
+    display: flex;
+    align-items: center;
+}
+
+.btn-frame span {
+    display: flex;
+    align-items: center;
+}
+
+.btn-frame svg {
+    margin-left: 10px;
+}
+
+/* Ajustes para o botão 'Consulte sua cobertura' */
+.btn.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-container {
+    width: 328px;
+    margin: 0 auto; /* Centraliza o elemento horizontalmente */
+}
+
+.btn-container .btn {
+    width: 100%; /* O botão ocupa toda a largura do contêiner */
+}
+
+/* Estilos para o formulário de login */
+.card-signup {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.header {
+    padding: 20px;
+}
+
+.input-group-addon {
+    background-color: #eee;
+}
+
+.input-group .form-control {
+    border-left: 0;
+}
+
+.checkbox label {
+    font-weight: normal;
+}
+
+.btn[disabled] {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+/* Ajuste dos ícones dentro dos input-group */
+.input-group .input-group-addon .material-icons {
+    font-size: 24px;
+}
+.btn-block {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para o footer */
+.site-footer {
+    background-color: rgb(1, 84, 80, 1);
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-footer__link {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.site-footer__bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .site-footer__bottom-container {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+    .container, .container-md, .container-sm {
+        max-width: 1120px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Opcional: Estilos para o conteúdo */
+.he {
+    padding-top: 70px;
+}
+/* .navbar-collapse {
+    font-size: 2rem;
+} */
+
+
+
+/* Início do código CSS */
+.planos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card-plano {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    width: 220px;
+    margin: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 20px 0px #28a745;
+}
+
+.selo-destaque {
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 5px 10px;
+    position: absolute;
+    top: 15px;
+    left: -45px;
+    transform: rotate(-45deg);
+    width: 200px;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.card-header p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+}
+
+.card-body {
+    background-color: #3d3d3d;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.preco {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.preco span {
+    display: block;
+    font-size: 1em;
+    color: #fff;
+}
+
+.preco strong {
+    font-size: 1.8em;
+    color: #00a300;
+}
+
+.preco strong span {
+    font-size: 0.5em;
+}
+
+.beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.beneficios li {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.beneficios li::before {
+    content: "✔";
+    color: #4caf50;
+    margin-right: 10px;
+}
+
+.btn-assinar {
+    display: flex;
+    text-align: center;
+    background-color: #4caf50;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 25px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-assinar:hover {
+    background-color: #45a049;
+    text-decoration: none !important;
+}
+
+.card-footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.card-footer a {
+    color: #6a1b9a;
+    text-decoration: none;
+}
+
+.card-plano:hover {
+    border-color: #00a300;
+}
+
+/* Estilos responsivos */
+@media (max-width: 668px) {
+    .planos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-plano {
+        width: 90%;
+    }
+}
+/* Fim do código CSS */
+
+.card-sobre {
+    background-color: #fff;
+}
+
+.card-sobre-header {
+    border: none;
+}
+.col-contato {
+    flex: none;
+    max-width: none;
+}

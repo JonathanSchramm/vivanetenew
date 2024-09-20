@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Lista de Clientes{% endblock %}
+
+{% block content %}
+<h1>Lista de Clientes</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>{{ cliente.endereco }}</td>
+            <td>{{ cliente.telefone }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'adicionar_cliente' %}" class="btn btn-primary">Adicionar Cliente</a>
+{% endblock %}
